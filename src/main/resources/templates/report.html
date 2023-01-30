@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+
+<body class="container">
+
+<h1>Itemized Deductions Helper</h1>
+<table>
+    <tr>
+        <td>Tax Payer Id:</td>
+        <td th:text="${taxPayer.id}"></td>
+    </tr>
+    <tr>
+        <td>Tax Payer Filling Status:</td>
+        <td th:text="${taxPayer.filingStatus.label}"></td>
+    </tr>
+</table>
+<table class="table">
+    <caption th:text="${medicalTitle}"></caption>
+    <tr>
+        <th>Year</th>
+        <th>Institution Name</th>
+        <th>Amount</th>
+    </tr>
+    <tr th:each="item : ${medicalItems}">
+        <td th:text="${item.yearName}"></td>
+        <td th:text="${item.institutionName}"></td>
+    <td th:text="${item.amount}"></td>
+    </tr>
+</table>
+<table class="table">
+    <tr>
+        <td>Gross Total</td>
+        <td th:text="${medicalTotal}"></td>
+    </tr>
+    <tr>
+        <td>Adjusted Total (Enter in Line 4 of SCHEDULE A)</td>
+        <td th:text="${medicalDeductibleTotal}"></td>
+    </tr>
+</table>
+
+<table class="table">
+    <caption th:text="${taxesPaidTitle}"></caption>
+    <tr>
+        <th>Year</th>
+        <th>Institution Name</th>
+        <th>Amount</th>
+    </tr>
+    <tr th:each="item : ${taxesPaidItems}">
+        <td th:text="${item.yearName}"></td>
+        <td th:text="${item.institutionName}"></td>
+        <td th:text="${item.amount}"></td>
+    </tr>
+</table>
+<table class="table">
+    <tr>
+        <td>Gross Total</td>
+        <td th:text="${taxesPaidTotal}"></td>
+    </tr>
+    <tr>
+        <td>Adjusted Total (Enter in Line 7 of SCHEDULE A)</td>
+        <td th:text="${taxesPaidDeductibleTotal}"></td>
+    </tr>
+</table>
+
+
+
+</body>
+</html>

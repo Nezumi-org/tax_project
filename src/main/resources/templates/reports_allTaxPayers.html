@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>User Record Details</h1>
+<th:block th:each = "taxPayer : ${taxPayers}">
+    <p th:text = "${taxPayer.id}">TaxPayer Id</p>
+    <ul>
+        <table class="table">
+            <tr>
+                <th>Year</th>
+                <th>Institution Name</th>
+                <th>Amount</th>
+            </tr>
+            <tr th:each = "medicalItem : ${taxPayer.medicalItems}">
+                <td th:text="${medicalItem.yearName}" ></td>
+                <td th:text="${medicalItem.institutionName}"></td>
+                <td th:text="${medicalItem.amount}"></td>
+            </tr>
+        </table>
+    </ul>
+</th:block>
+
+</body>
+</html>

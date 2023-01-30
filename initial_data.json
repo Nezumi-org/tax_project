@@ -1,0 +1,44 @@
+[
+  {
+    "taxPayer": "100",
+    "code": "Medical",
+    "year": "2022",
+    "institutionName": "Wall Green",
+    "amount": "10.5"
+  },
+  {
+    "taxPayer": "100",
+    "code": "Medical",
+    "year": "2022",
+    "institutionName": "PolyClinic",
+    "amount": "13.5"
+  },
+  {
+    "taxPayer": "100",
+    "code": "Medical",
+    "year": "2022",
+    "institutionName": "CDC",
+    "amount": "50"
+  },
+  {
+    "taxPayer": "100",
+    "code": "TaxesPaid",
+    "year": "2022",
+    "institutionName": "State tax",
+    "amount": "20000"
+  },
+  {
+    "taxPayer": "100",
+    "code": "TaxesPaid",
+    "year": "2022",
+    "institutionName": "Local tax",
+    "amount": "5000"
+  },
+  {
+    "taxPayer": "200",
+    "code": "Medical",
+    "year": "2022",
+    "institutionName": "Safeway",
+    "amount": "17.5"
+  }
+]
