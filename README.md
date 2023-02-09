@@ -3,7 +3,7 @@
 Tax project is a web app which models data and logic of Itemized Deductions (SCHEDULE A) Tax Form, built by using Maven and Spring Boot. 
 
 **Current functionality**:
-It loads initial data of tax payers and expense data from file system to H2 database, calculates deductable amount based on the tax category, and displays a report per user or all users:
+The program loads initial data of tax payers and expense data from file system to H2 database, calculates deductable amount based on the tax category, and displays a report per user or all users:
 
 A View for an indididual tax payer is loaded by http://localhost:8080/tax/report/{taxpayerid}/{year}:
 
