@@ -25,7 +25,12 @@ public class MedicalItemService implements DeductionCalculatable{
         MedicalItem medicalItem = new MedicalItem(taxPayer, Integer.parseInt(year), institutionName, Double.parseDouble(amount));
         return medicalItemRepository.save(medicalItem);
     }
-
+    public void deleteMedicalItem(Integer taxPayerId,  Integer itemId) {
+        TaxPayer taxPayer = taxPayerRepository.findById(taxPayerId).orElseThrow(() ->
+               new RuntimeException("TaxPayer does not exist. Id: " + taxPayerId));
+        medicalItemRepository.deleteById(itemId);
+        taxPayer.deleteMedicalItem(itemId);
+    }
     /**
      *return amount adjusted based on the Medical and Dental Expenses formula
      * @param taxPayerId
