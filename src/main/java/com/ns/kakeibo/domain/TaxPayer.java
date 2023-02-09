@@ -18,10 +18,10 @@ public class TaxPayer {
     private FilingStatus filingStatus;
 
     @OneToMany(fetch = FetchType.EAGER , cascade = CascadeType.ALL)
-    @JoinColumn(name = "taxpayer_id")
+    @JoinColumn(name = "tax_payer_id")
     private Set<MedicalItem> medicalItems= new HashSet<>();
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @JoinColumn(name = "taxpayer_id")
+    @JoinColumn(name = "tax_payer_id")
     private Set<TaxesPaidItem> taxesPaidItems= new HashSet<>();
     
     public TaxPayer(Integer id, String firstName, String lastName, FilingStatus filingStatus) {
