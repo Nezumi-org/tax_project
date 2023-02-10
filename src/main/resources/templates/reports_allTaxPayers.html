@@ -1,12 +1,13 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link th:href="@{/style.css}" rel="stylesheet" />
 </head>
 <body>
-<h1>User Record Details</h1>
+<h2>User Record Details</h2>
 <th:block th:each = "taxPayer : ${taxPayers}">
-    <p th:text = "${taxPayer.id}">TaxPayer Id</p>
+    <p>TaxPayer Id: <span th:text="${taxPayer.id}">Id</span></p>
     <ul>
         <table class="table">
             <tr>
@@ -18,6 +19,11 @@
                 <td th:text="${medicalItem.yearName}" ></td>
                 <td th:text="${medicalItem.institutionName}"></td>
                 <td th:text="${medicalItem.amount}"></td>
+            </tr>
+            <tr th:each = "taxesPaidItem : ${taxPayer.taxesPaidItems}">
+                <td th:text="${taxesPaidItem.yearName}" ></td>
+                <td th:text="${taxesPaidItem.institutionName}"></td>
+                <td th:text="${taxesPaidItem.amount}"></td>
             </tr>
         </table>
     </ul>

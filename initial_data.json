@@ -17,7 +17,7 @@
     "taxPayer": "100",
     "code": "Medical",
     "year": "2022",
-    "institutionName": "CDC",
+    "institutionName": "Bartel",
     "amount": "50"
   },
   {
@@ -40,5 +40,26 @@
     "year": "2022",
     "institutionName": "Safeway",
     "amount": "17.5"
+  },
+  {
+    "taxPayer": "200",
+    "code": "Medical",
+    "year": "2022",
+    "institutionName": "Drug1",
+    "amount": "20.5"
+  },
+  {
+    "taxPayer": "200",
+    "code": "TaxesPaid",
+    "year": "2022",
+    "institutionName": "State tax",
+    "amount": "200"
+  },
+  {
+    "taxPayer": "200",
+    "code": "TaxesPaid",
+    "year": "2022",
+    "institutionName": "State tax",
+    "amount": "10"
   }
 ]

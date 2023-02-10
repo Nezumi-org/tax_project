@@ -74,7 +74,7 @@ public class TaxController {
         Collection<TaxPayer> taxPayers = (Collection<TaxPayer>) taxPayerService.lookup();
         for ( TaxPayer taxPayer: taxPayers){
             Integer id = taxPayer.getId();
-            List<MedicalItem> medicalItems = taxPayer.getMedicalItems();
+            Set<MedicalItem> medicalItems = taxPayer.getMedicalItems();
             System.out.println( " TaxPayerId   "+ id);
             medicalItems.forEach(r->System.out.println(r.getInstitutionName()));
         }

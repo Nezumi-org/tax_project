@@ -4,7 +4,9 @@ import com.ns.kakeibo.domain.FilingStatus;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 public class TaxPayer {
@@ -30,7 +32,7 @@ public class TaxPayer {
         this.firstName = firstName;
         this.lastName = lastName;
         this.filingStatus = filingStatus;
-        medicalItems = new ArrayList<>();
+
     }
     public TaxPayer() { }
     public FilingStatus getFilingStatus() {
@@ -58,7 +60,15 @@ public class TaxPayer {
     public void addTaxesPaidItem(TaxesPaidItem taxesPaidItems){
         getTaxesPaidItems().add(taxesPaidItems);
     }
-
+    public void deleteMedicalItem(Integer itemId) {
+        Set<TaxesPaidItem> items = getTaxesPaidItems();
+        for(TaxesPaidItem item: items){
+            if (item.getItemId().equals(itemId)){
+                items.remove(item);
+                break;
+            }
+        }
+    }
     @Override
     public String toString() {
         return "TaxPayer{" +
